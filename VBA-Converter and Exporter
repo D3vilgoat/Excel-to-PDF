@@ -1,0 +1,17 @@
+Private Sub Workbook_AfterSave(ByVal Success As Boolean)
+
+    If Success Then
+        Call SaveAsPDF("C:\Test.PDF") 'Dateipfad wir an die Funktion gegeben
+        MsgBox ("Datei wurde erfoglreich gespeichert!")
+    Else
+        MsgBox ("Fehler beim Speichern der Datei!")
+    End If
+    
+End Sub
+
+
+Function SaveAsPDF(saveLocation As String)
+
+    ActiveWorkbook.ExportAsFixedFormat Type:=xlTypePDF, Filename:=saveLocation 'Datei wird gespeichert
+
+End Function
