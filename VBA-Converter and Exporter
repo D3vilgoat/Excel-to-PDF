@@ -1,7 +1,7 @@
 Private Sub Workbook_AfterSave(ByVal Success As Boolean)
 
     If Success Then
-        Call SaveAsPDF("SAVELOCATION")   'Savelocattion is given
+        Call SaveAsPDF("SAVELOCATION")   'Function is called and savelocattion is given
         MsgBox ("Datei wurde erfoglreich gespeichert!")   'Write your message you want too give if the save is succesfull
     Else
         MsgBox ("Fehler beim Speichern der Datei!")   'Write your message you want too give if the save has failed
